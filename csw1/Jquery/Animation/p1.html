@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #div1 {
+            height: 70px;
+            width: 70px;
+            border-radius: 20px;
+            background-color: rgb(228, 33, 33);
+            /* position: fixed; */
+            
+        }
+    </style>
+
+    <script>
+        $(document).ready(() => {
+            $("#btn1").click(() => {
+                $("#div1").animate({
+                    left: "+=500px",
+                    opacity: "0.2", height: "150px",
+                    width: "toggle"
+                }, 4000)
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+    <button id="btn1">
+        Animation
+    </button>
+    <div id="div1"></div>
+    <br>
+
+</body>
+
+</html>

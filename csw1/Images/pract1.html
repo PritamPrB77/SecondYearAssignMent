@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-gap:10px;
+        .item1,.item2,.item3,.item4{
+            height: 15vw;
+            width: 15vw;
+            background-color: rgb(116, 76, 150);
+        }
+
+    }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item4"></div>
+    </div>
+</body>
+</html>

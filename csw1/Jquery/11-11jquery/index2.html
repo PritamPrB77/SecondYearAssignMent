@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        
+        body{
+            display:flex;
+            gap: 20vw;
+        }
+        .table{
+            table{
+                outline: none;
+                tr:nth-child(2n){
+                outline: none;
+                background-color: chocolate;
+            }
+            }
+           
+        }
+        .s1{
+            background-color: rgb(144, 216, 86);
+        }
+    </style>
+    <script>
+       $(document).ready(function(){
+        let p="";
+        $("#adn").click(function(){
+
+          var name=$("#inp1").val();
+          let sub=$("#inp2").val();
+          let mark=$("#inp3").val();
+          console.log(name)
+           p= "<tr>"+"<td>"+name+"</td>"+"<td>"+sub+"</td>"+"<td>"+mark+"</td>"+"</tr>"
+           $("#table").append(p);
+           $("input").val(" ")
+        })
+        $("#remove").click(function(){
+            $("tr").last().remove();
+        })
+        $("#colorChange").click(function(){
+                $("table tr").toggleClass("s1");
+        })
+       })
+    </script>
+</head>
+<body>
+     
+    <div class="table">
+         
+    <table id="table" >
+        <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Mark</th>
+        </tr>
+        <tr>
+            <td>avas</td>
+            <td>csw</td>
+            <td>100</td>
+        </tr>
+    </table>
+    </div>
+    <div class="updater">
+        <input type="text" id="inp1">
+        <input type="text" id="inp2">
+        <input type="text" id="inp3">
+
+       <button id="adn">Add row</button>
+       <button id="remove">remove</button>
+       <button id="colorChange">color change</button>
+
+
+       
+    </div>
+
+</body>
+</html>

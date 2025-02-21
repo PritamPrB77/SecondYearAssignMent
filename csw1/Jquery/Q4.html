@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION $</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("#btn1").click(function () {
+                $(".div1 p").remove("#" + $("#").val());
+            })
+        })  
+    </script>
+
+    <style>
+        .div1 {
+            padding: 34px;
+            height: 20vh;
+            width: 30vh;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <p id="p1">This is the 1st paragrph</p>
+        <p id="p2">This is the 2nd paragrph</p>
+        <p id="p3">This is the 3rd paragrph</p>
+    </div>
+    <br>
+    <br>
+    <div class="div2">
+        <input type="text" id="input-type">
+        <br>
+        <button id="btn1">Click</button>
+    </div>
+</body>
+
+</html>

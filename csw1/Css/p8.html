@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            position: relative;
+        }
+        .inner{
+            display: none;
+            background-color: rgb(33, 28, 34);
+            width: 60px;
+            height: 80px;
+            padding: 12px 16px;
+            margin: 10px;
+            box-shadow: 15px 15px 10px 10px grey ;
+      
+           /* opacity: 0; */
+            li{
+                list-style-type: none;
+               
+            }
+            li a{
+                text-decoration: none;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+              
+                /* display: block; */
+            }
+            li a:link{
+                color: brown;
+            }
+            li a:hover{
+                background-color: cornflowerblue;
+                font-family: cursive;
+            }
+        }
+       
+        /* .outer input:checked+.inner{
+            display: block;
+            /* opacity: 1; } */
+            .outer:hover .inner{
+                display: block;
+            }
+            /* .outer input{
+                display: none;
+            }
+     */
+    </style>
+</head>
+
+<body>
+   
+    <div class="outer">
+        <label for="s1">Nav Menu</label>
+        <!-- <input type="checkbox" name="" id="s1" > -->
+        <div class="inner">
+          <li><a href="#s1">Home</a></li>  
+          <li><a href="#s1">About</a></li>  
+          <li><a href="#s1">Section</a></li>  
+          <li><a href="#s1">Contant</a></li>  
+        </div>
+    </div>
+</body>
+
+</html>

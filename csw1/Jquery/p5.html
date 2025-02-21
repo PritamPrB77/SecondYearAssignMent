@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+         $(document).ready(()=>{
+            $('#btn1').click(()=>{
+               $(".key").css("color","red").slideUp(3000);
+            })
+            $('#btn2').click(()=>{
+                $(".key").css("color","green").slideDown(3000);
+               
+            })
+            $('#btn3').click(()=>{
+                $(".key").css("color","blue").slideToggle(3000);
+               
+            })
+            $('#btn4').click(()=>{
+                $(".key").stop(true);
+                // $(".key").stop();
+                  
+            })
+           
+        })
+    </script>
+</head>
+<body>
+    <h1 class="key">This Is Heading</h1>
+    <h2 class="key">This Is hEAD2</h2>  
+    <button id="btn1">slideup</button>
+    <button id="btn2">slideDown</button>
+    <button id="btn3">slideToggle</button>
+    <button id="btn4">Stop</button>
+
+
+</body>
+</html>

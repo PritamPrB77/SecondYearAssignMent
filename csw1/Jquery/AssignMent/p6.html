@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jQuery.js"></script>
+    <style>
+      #myDiv {
+        width: 300px;
+        height: 200px;
+        margin: 20px auto;
+        text-align: center;
+        border: 1px solid black;
+      }
+      .highlight {
+        background-color: yellow;
+      }
+      .dim {
+       /* background-color: yellow; */
+        opacity: 0.5;
+      }
+      button {
+        display: block;
+        margin: 10px auto;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $("#addHighlight").click(function () {
+          $("#myDiv").removeClass("dim").addClass("highlight");
+        });
+
+        $("#addDim").click(function () {
+          $("#myDiv").removeClass("highlight").addClass("dim");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="myDiv">This is my div!</div>
+    <button id="addHighlight">Add Highlight</button>
+    <button id="addDim">Add Dim</button>
+  </body>
+</html>

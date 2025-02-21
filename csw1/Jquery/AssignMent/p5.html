@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <script src="jQuery.js"></script>
+    <style>
+        ul {
+            list-style-type: none;
+	    padding: 0;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('#myList').append('<li>CSS</li>');
+            $('#myList').prepend('<li>Introduction to Full Stack Development</li>');
+            $('#myList').after('<p>Topics updated</p>');
+            $('#myList').before('<h2>List of Topics Covered</h2>');
+        });
+    </script>
+</head>
+<body>
+    <ul id="myList">
+        <li>Getting Started with Full Stack</li>
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+</body>
+</html>

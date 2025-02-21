@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        height: 200px;
+        width: 300px;
+        text-align: left;
+      }
+
+      tr:nth-child(2n) {
+        /* odd/even */
+        background-color: #5b968f;
+      }
+
+      tr:nth-child(2n + 1) {
+        background-color: #45568a;
+      }
+
+      tr:nth-child(1) {
+        background-color: cornsilk;
+      }
+
+      ul > li:nth-child(3n) {
+        list-style: none;
+        background-color: darkgrey;
+      }
+      .demo{
+
+      }
+      #span1{
+        background-color: cyan;
+        display: inline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Table In Csss</h2>
+    <table cellspadding="10px" cellsspacing="5px">
+      <tr>
+        <th>Name</th>
+        <th>Mark</th>
+      </tr>
+      <tr>
+        <td>s1</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>s2</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>s3</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>s4</td>
+        <td>100</td>
+      </tr>
+    </table>
+    <ul>
+      <li>W1</li>
+      <li>W2</li>
+      <li>W3</li>
+      <li>W1</li>
+      <li>W2</li>
+      <li>W3</li>
+      <li>W1</li>
+      <li>W2</li>
+      <li>W3</li>
+    </ul>
+<h2>Css DisPlay</h2>
+    <a href="#s1" class="demo">A1</a>
+    <a href="#s2" class="demo">A2</a>
+    <a href="#s3" class="demo">A3</a>
+    <a href="#s4" class="demo">A4</a>
+
+    <span class="" id="span1">Span2</span>
+    <span class="" id="span2">Span3</span>
+  </body>
+</html>

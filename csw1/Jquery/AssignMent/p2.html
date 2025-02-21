@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jQuery.js"></script>
+    <style>
+        .cb{
+            border:8px solid black;
+            height: 20vw;width: 20vw;
+            background-color: lightgreen;
+            text-align: center;
+            margin: auto;
+            
+        }
+    </style>
+    <script>
+        $(document).ready(()=>{
+        $(".cb").click(function(){
+            $(".cb").html("<b>clicked!</b>") 
+           
+        }).dblclick(function(){
+            $(".cb").css('background-color','orange');
+        }).mouseenter(()=>{
+            $(".cb").css('border','8px solid green')
+        }).mouseleave(()=>{
+            $(".cb").css('border','8px solid black')
+        })
+        
+        })
+    </script>
+</head>
+<body>
+    <div class="cb">Hello World</div>
+    <p>dvdgv</p>
+</body>
+</html>

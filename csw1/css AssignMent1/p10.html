@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form In CSS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body,html{
+            background-color:rgba(182, 174, 145, 0.665);
+            height: 100%;
+            width: 100%;
+            color: rgb(12, 11, 6);
+            
+        }
+        form{
+            border:5px solid grey ;
+             width: 40vw;
+             height: 80vh;
+             margin:auto;
+             background-color: cornflowerblue;
+           
+        }
+        form label{
+            color: rgb(92, 207, 81);
+            font-size: 27px;
+        }
+        input[type=text],input[type=password],input[type=submit],input[type=email]{
+          /* border: 2px solid grey; */
+          outline: none;
+          height: 40px;
+          width: 200px;
+          border: 2px solid green ;
+          border-radius: 40px;
+          font-size: 17px;
+          margin: 15px;
+        }
+        select{
+            height: 40px;
+          width: 200px;
+          border: 2px solid green ;
+          border-radius: 40px;
+          font-size: 17px;
+          margin: 15px;
+        }
+        textarea{
+            font-size: 23px;
+            border-radius: 30px;
+            margin: 15px;
+        }
+        .image{
+            height: 60px;
+            width: 60px;
+           border: 1px solid #fff;
+           border-radius: 50%;
+           margin: auto;
+           margin-bottom: 15px;
+        }
+        .image img{
+            height: 60px;
+            width: 60px;  border-radius: 50%;
+        }
+        
+        input[type="submit"]:hover{
+            background-color: brown;
+        }
+        input[type=submit]:focus{
+            background-color: rgb(26, 197, 66);
+        }
+       
+       
+
+    </style>
+</head>
+
+<body>
+    <form action="/action_.page.php">
+
+        <div class="image">
+           <img src="https://i.pinimg.com/736x/d3/ca/7e/d3ca7e8eea8e78f9310096774ec4f423.jpg" alt="">
+        </div>
+        <label for="ename">Employee NAme:-</label>
+        <input type="text" id="ename" placeholder="enter Ur name" required name="ename" /><br><hr>
+        <label for="pws">Password:-</label>
+        <input type="password" id="pws" placeholder="Password" required name="pws" /><br><hr>
+        <label for="email">Enter Ur Email:-</label>
+        <input type="email" id="email" placeholder="email" required name="email" /><br><hr>
+        <label for="city">Select Your City</label>
+        <select name="city" id="city">
+            <option value="bhubaneswar">bhubaneswar</option>
+            <option value="Dhenkanal">Dhenkanal</option>
+            <option value="Cuttackl">Cuttackl</option>
+            <option value="puri">puri</option>
+        </select><br><hr>
+        <label for="Comment">Enter Ur Cmts:-</label><br>
+        <textarea name="Comments" id="Comments" cols="30" rows="10" placeholder="kya kar raha hai cmt daal"></textarea><br><hr>
+
+        <label for="male">Enter your gender:-</label><br>
+        <label for="male">male</label>
+        <input type="radio" name="gender" value="male" id="male" >
+        <label for="female">female</label>
+        <input type="radio" name="gender" value="female" id="female">
+        <label for="other">other</label>
+        <input type="radio" name="gender" value="other" id="other"><br>
+        <input type="submit" value="Submit">
+        <input type="button" value="nn">
+            
+        <div class="s1">
+            <div class="s2"></div>
+            <s3></s3>
+        </div>
+      
+    </form>
+</body>
+
+</html>

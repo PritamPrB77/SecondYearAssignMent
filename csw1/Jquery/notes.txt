@@ -1,0 +1,5 @@
+Fading-->
+ i>FadeIn()--hidden to Vissible
+ ii>Fadeout():Visible to Hidden
+ iii>Fade TO->FadeOut()to aspecific point Ex..>fadeto(200,0.2);
+ iv> Fade Toggle--> fade in AND  FadeOut

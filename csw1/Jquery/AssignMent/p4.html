@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+	<style>
+		#content {
+              		padding: 10px;
+            		border: 1px solid #ccc;
+        	}
+	</style>
+	<script src="jQuery.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#fText').click(function() {
+				alert("text of paragrapg;->"+$('#myPara').text());
+				let x=prompt("enter an age")
+				console.log(x)
+			});
+			$('#fHtml').click(function() {
+				alert($('#content').html());
+			});
+		});
+	</script>
+</head>
+<body>
+	<p id="myPara">My First Para that shows you ain alert</p>
+	<div id="content">The <span>C</span>ontent about jQuery and you have to read this content.</div>
+
+	<button id="fText">Fetch Text</button>
+	<button id="fHtml">Fetch HTML</button>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .outer {
+      width: 15vw;
+      height: 5vh;
+      margin: auto;
+      position: relative;
+       /* background-color: red;  */
+    }
+
+    .Drop-down-heading {
+      border: 2px solid #31a29ebd;
+      width: 15vw;
+      height: 5vh;
+      font-size: 24px;
+      border-radius: 25px;
+      text-align: center;
+      margin: auto;
+    }
+
+    .dropdown-Container {
+      height: 30vh;
+      width: 15vw;
+      margin: auto;
+      border: 1px solid green;
+
+      text-align: center;
+      border-radius: 25px;
+      box-shadow: rgba(137, 113, 113, 0.3) 0px 19px 38px,
+        rgba(129, 117, 117, 0.22) 0px 15px 12px;
+      /* position: relative; */
+      position: absolute;
+      display: none;
+      overflow: hidden;
+    }
+
+    .dropdown-Container li {
+      list-style: none;
+      text-decoration: none;
+      font-size: 31px;
+      position: relative;
+    }
+
+    .dropdown-Container li:hover {
+      background-color: coral;
+    }
+
+    .dropdown-Container li:nth-child(2n) {
+      font-family: cursive;
+      color: cornflowerblue;
+    }
+
+    .dropdown-Container li:nth-child(2n + 1) {
+      font-weight: bold;
+      color: rgb(104, 192, 46);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .outer:hover .dropdown-Container {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outer">
+    <div class="Drop-down-heading">Sports</div>
+    <div class="dropdown-Container">
+      <ul>
+        <li class="#w1">Cricket</li>
+      <li class="#w2">foootBAll</li>
+      <li class="#w3">hocky</li>
+      <li class="#w4">swimmimg</li>
+      <li class="#w5">carrom</li>
+      <li class="#w6">Kabadi</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+  <p style="font-style:italic">dvdvfcbvf</p>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("#btn1").click(function () {
+                alert($("#p1").css("background-color"))
+                alert($("#p2").css("background-color"))
+                alert($("#p3").css("background-color"))
+            })
+            $("#btn2").click(function () {
+                $("#p1").css("background-color", "blueviolet")
+                $("#p2").css("background-color", "rebeccapurple")
+                $("#p3").css("background-color", "gray")
+            })
+        })  
+    </script>
+    <style>
+        #p1 {
+            background-color: gray;
+        }
+
+        #p2 {
+            background-color: green;
+        }
+
+        #p3 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p1">This is the first paragraph</p>
+    <p id="p2">This is the second paragraph</p>
+    <p id="p3">This is the third paragraph</p>
+
+    <button id="btn1">Get property</button>
+    <button id="btn2">set property</button>
+
+</body>
+
+</html>

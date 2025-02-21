@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp Form</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<style>
+
+#logo{
+    
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border: 2px solid #000;
+       width: 30%;
+       margin: auto;
+       padding: 12px;
+       border-radius: 20px;
+}
+#lo{
+ font-size: 100px;
+}
+</style>
+</head>
+
+<body style="font-size:20px ;">
+    <!-- <fieldset> -->
+        <div id="logo">
+            <i id="lo" class="ri-shield-user-fill"></i>
+        <lagend align="center" >LogIn</lagend>
+        <form action="/public/dommy.html">
+            <label for="UserNAme">UserNAme:-</label>
+            <input type="text" name="UserNAme" id="UserNAme" required="required" />
+            <br />
+            <hr />
+            <label for="password"> Enter password</label>
+            <input type="password" name="password" id="password"  required/>
+            <br />
+            <hr />
+            <a href="./dommy.html"><input type="submit" value="LogIn"></a>
+            <a href="./registration.html"><input type="button" value="Registration"></a>
+        </form>
+    </div>
+    <!-- </fieldset> -->
+</body>
+
+</html>

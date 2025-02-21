@@ -1,0 +1,45 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btn").click(function(event) {uu8
+               // event.preventDefault(); // Prevent the form from submitting
+                const a = $("#name").val();
+                const b = $("#email").val();
+                const c = $("#password").val(); // Corrected ID here
+
+                if (a === "" || b === "" || c === "") {
+                    $(".erro").css({"display":"block"}).text("Field cannot be empty")
+                    alert('Field cannot be empty');
+                } else {
+                    // You can add form submission logic here if needed
+                    alert('Form submitted successfully!');
+                     // Just for confirmation
+                    
+                }
+            });
+        });
+    </script>
+    <style>
+        button {
+            background-color: #007bff;
+            color: white;
+        }
+
+        button:hover {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <form id="signupForm">
+        <input type="text" id="name" placeholder="Name" required="required">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required> <!-- Corrected ID here -->
+        <button type="submit" id="btn">Sign Up</button>
+    </form>
+    <p class="erro" style="color:red; display:none;" >dvdv</p>
+    <h2 class="error"></h2>
+</body>
+</html>

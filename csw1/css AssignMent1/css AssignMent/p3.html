@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+<head>
+   <title>Image Hover</title>
+   <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .image{
+        height: 50vw;
+        width: 50vw;
+        border: 10px solid #a63d3d;
+        text-align: center;
+    }
+    .image>img{
+        height: 45vw;
+        width: 45vw;
+        padding: 5px;
+    }
+    .image>img:hover+div{
+        color: black;
+        background-color: cadetblue;
+    }
+    .image>div{
+        color: #32945c;
+        background-color: bisque;
+       
+        font-size: 23px;
+    }
+   </style>
+</head>
+<body>
+   
+    
+    <div class="image">
+        <img src="https://images.pexels.com/photos/28435070/pexels-photo-28435070/free-photo-of-ancient-rock-tombs-in-dalyan-turkiye.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+       
+        <div>My Special Div</div>
+    </div>
+</body>
+</html>

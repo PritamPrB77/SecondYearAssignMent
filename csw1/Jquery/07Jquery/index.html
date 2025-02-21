@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #id{
+            background-color: coral;
+            height: 200px;
+            width: 400px;
+        }
+    </style>
+    <script src="../AssignMent/jQuery.js"></script>
+    <script>
+$(document).ready(function(){
+    $("#b1").click(function(){
+       $("#id").remove();
+    })
+    $("#b2").click(function(){
+       $("#id").empty();
+    })
+    $("#b3").click(function(){
+       //$(".para").remove(".para");
+       $("p").remove("#se");
+
+    })
+})
+    </script>
+</head>
+<body>
+    <p>Remove Empty And Remove With Selectoir</p>
+    <div id="id">
+        we are using div element
+        <p class="para">This is first Paragraph</p>
+        <p class="para">This is   Second  Paragraph</p>   
+        <p id="se">dsgregrerg</p>
+        <p>Paragraph Without Class</p>
+        
+    </div>
+    <br>
+    <button id="b1">Remove</button>
+    <button id="b2">Empty</button>
+    <button id="b3">Remove with  selector</button>
+</body>
+</html>

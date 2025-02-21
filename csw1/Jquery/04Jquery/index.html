@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        //alert("hello Bro!");
+        $("#btn1").click(() => {
+          alert("Text:" + $("#para").text());
+        });
+        $("#btn2").click(() => {
+          alert("HTML:" + $("#para").html());
+        });
+        $("#btn3").click(() => {
+          alert("Value:" + $("input").val());
+          $("input").val(" ");
+        });
+        $("#btn4").click(() => {
+          alert("Text:" + $("#para").text("Hello World!"));
+        });
+        $("#btn5").click(() => {
+          $("#para").html(`Hello <i>Hello World </i>`);
+        });
+        $("#btn6").click(() => {
+          alert("Value:" + $("input").val());
+          $("input").val(" wrt smting....");
+        });
+        $("#btn7").click(() => {
+          alert("Attribute" + $("a").attr("href"));
+        });
+        $("#btn8").click(() => {
+          alert(
+            "Atttribute is" +
+              $("a").attr("href", "https://www.soa.ac.in").attr("href")
+          );
+          $("a").text("Soa Link");
+        });
+        $("#btn9").click(() => {
+          $("#img")
+            .attr(
+              "src",
+              "https://images.pexels.com/photos/28865272/pexels-photo-28865272/free-photo-of-cozy-indoor-garden-with-elegant-vintage-furniture.jpeg?auto=compress&cs=tinysrgb&lazy=load"
+            )
+            .slideToggle(1000);
+          $("#img")
+            .mouseover(() => {
+              alert(
+                "Atrribute is  " +
+                  $("img").attr("src") +
+                  " " +
+                  "height: " +
+                  $("img").attr("height") +
+                  " " +
+                  "width " +
+                  $("img").attr("width")
+              );
+            })
+            .css("cursor", "pointer");
+        });
+
+        $("#btn10").click(() => {
+          $("#img").attr(
+            "src",
+            "https://images.pexels.com/photos/29169114/pexels-photo-29169114/free-photo-of-charming-countryside-cabin-in-autumn.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          );
+        });
+
+        $("a").mouseover(() => {
+          alert("Atrribute is  " + $("a").attr("href"));
+        });
+
+        $("#img")
+          .mouseover(() => {
+            alert(
+              " " +
+                "height: " +
+                $("img").attr("height") +
+                " " +
+                "width " +
+                $("img").attr("width") +
+                "  " +
+                "source is" +
+                $("img").attr("src")
+            );
+          })
+          .css("cursor", "pointer");
+        $("#p").click(() => {
+          console.log($("#p").innerHTML);
+          // console.log($("#sx h1").innerText);
+          console.log($("#p").nodeName);
+          console.log($("#p").nodeValue);
+          console.log($("#p").parentNode);
+
+          console.log($("#p").childNodes);
+
+          console.log($("#p").attribites);
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="sx">
+      <h1 alt="dddcdcd" id="p">helllo
+        <span>sdsdsdsd</span>
+      </h1>
+      <h2>dvdvd</h2>
+    </div>
+
+    <p id="para">This Is Paragraph<b>Bold text</b></p>
+    <p>
+      <label for="sname"> Student NAme</label>
+      <input type="text" name="sname" id="sname" value="hdh" />
+    </p>
+    <a href="https://www.google.com"> googl link</a><br /><br /><br /><br />
+    <img
+      id="img"
+      src="https://images.pexels.com/photos/28865272/pexels-photo-28865272/free-photo-of-cozy-indoor-garden-with-elegant-vintage-furniture.jpeg?auto=compress&cs=tinysrgb&lazy=load"
+      alt=""
+      height="100px"
+      width="100px"
+    />
+    <br />
+    <button id="btn1">Display TExt</button>
+    <button id="btn2">Display HTML</button>
+    <button id="btn3">Display VAlue</button>
+    <button id="btn4">set TExt</button>
+    <button id="btn5">set HTML</button>
+    <button id="btn6">set VAlue</button>
+    <button id="btn7">get Attribute</button>
+    <button id="btn8">set Attribute</button>
+    <button id="btn9">toggle IMage</button>
+    <button id="btn10">Change IMage</button>
+
+
+    
+  </body>
+</html>

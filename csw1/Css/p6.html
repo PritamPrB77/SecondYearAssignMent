@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Properyty</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .s {
+            position: static;
+            right: 10px;
+            border: 3px solid royalblue;
+        }
+
+        .R {
+            border: 2px solid cyan;
+            position: relative;
+
+            /* left: 300px; */
+            right: 20px;
+            top: 20px;
+        }
+
+        .F {
+            position: fixed;
+            bottom: 0;
+            background-color: burlywood;
+            right: 0;
+
+        }
+
+        .outer {
+            position: relative;
+            height: 20vw;
+            width: 20vw;
+            border: 2px solid grey;
+        }
+
+        .inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 30px;
+            width: 30px;
+            background-origin: 2px solid #974e4e;
+            background-color: green;
+        }
+
+        .box {
+            position: relative;
+            border: 2px solid rosybrown;
+            height: 20vw;
+            width: 40vw;
+            left: 30px;
+            overflow: auto;
+
+            #img1 {
+                position: absolute;
+                top: 0;
+                left: 20%;
+                height: 290px;
+                width: 30vw;
+
+            }
+
+            p {
+                position: absolute;
+                top: 18vw;
+                left: 0;
+
+            }
+
+        }
+
+        .sp3 {
+            position: sticky;
+            background-color: cyan;
+            border: 3px solid gold;
+            top: 30px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Static Example</h2>
+    <div class="s">This is Example Of Static</div>
+    <h2>Realtive Example</h2>
+    <div class="R">This is Example Of Realtive</div>
+    <h2> FixedExample</h2>
+    <div class="F">This is Example Of fixed</div>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    <div class="box">
+        <img id="img1"
+            src="https://images.pexels.com/photos/20709024/pexels-photo-20709024/free-photo-of-mountain-valley-in-autumn.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load"
+            alt="">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error voluptate tempore ducimus dolores minus
+            perferendis?Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, soluta commodi! Esse suscipit
+            fugiat veniam odio et sit dignissimos velit ea iste necessitatibus ipsa consequatur placeat, dolorem totam
+            maxime. Fuga fugiat libero neque laboriosam cum, labore ea perspiciatis provident maiores?</p>
+    </div>
+    <div class="sp3">gfjygjyuikuyt</div>
+
+    <div style="padding-bottom: 2000px;">
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima maxime minus, debitis provident totam
+            placeat, necessitatibus saepe a suscipit quisquam iusto, labore magnam! Ex cum quasi esse repellendus
+            quaerat expedit Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatum sequi illum
+            placeat? Veniam vitae voluptates hic, ullam cupiditate obcaecati corporis repellendus impedit consequatur ex
+            fugiat aliquam quia perferendis sapiente dolorum iste. Non magni perspiciatis ipsa quidem, aspernatur
+            suscipit eos!</p>
+    </div>
+
+
+
+</body>
+
+</html>

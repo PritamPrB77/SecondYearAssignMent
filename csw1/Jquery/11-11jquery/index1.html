@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+       #grandpa{
+        border: 2px solid #008000;
+       
+        padding: 10px;
+        
+       }
+       #papa{
+            border: 2px solid rgb(115, 173, 20);
+       
+        padding: 10px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                  $(".child").parent().css({"background-color":"royalblue","border":"2px solid red"});
+            })
+            $("#btn2").click(function(){
+                    $("#sib1").css({
+                        "border":"2px solid green", "color":"red"
+                    })
+            })
+            $("#btn3").click(function(){
+                    $("#grandpa").children().css({
+                        "border":"2px solid green", "color":"red"
+                    })
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="grandpa">grandpa
+        <div id="papa">
+            papa  
+                <p id="sib1"  class="child" >sib1</p>
+                <p id="sib2" class="child" >sib2 </p>
+                <p id="sib3" class="child" >sib3</p>
+
+        
+        </div>
+    </div>
+
+    <button id="btn1">parent</button>
+    <button id="btn2">siblings</button>
+    <button id="btn3">children</button>
+</body>
+</html>

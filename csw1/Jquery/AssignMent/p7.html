@@ -1,0 +1,75 @@
+<!-- Create a webpage that contains a table displaying student data and an 'Add Row' 
+button. The 'Add Row' button should add a new row with data from input fields each 
+time it is clicked. Additionally, include a 'Change Color' button to change the text color 
+of all table data to red.  -->
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                
+                $('#addRow').click(function() {
+                    
+                    const name = $('#name').val();
+                    const age = $('#age').val();
+                    const grade = $('#grade').val();
+    
+                    
+                    if (name && age && grade) {
+                        
+                        $('#studentTable tbody').append(
+                            `<tr>
+                                <td>${name}</td>
+                                <td>${age}</td>
+                                <td>${grade}</td>
+                            </tr>`
+                        );
+    
+                        
+                        $('#name').val('');
+                        $('#age').val('');
+                        $('#grade').val('');
+                    } else {
+                        alert('Please fill in all fields.');
+                    }
+                });
+    
+               
+                $('#changeColor').click(function() {
+                    $('#studentTable td').css('color', 'red');
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+        <form id="form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+            <label for="grade">Grade:</label>
+            <input type="text" id="grade" required>
+            <button id="addRow">Add Row</button>
+            <button id="changeColor">Change Color</button>
+        </form>
+
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+
+
+
+    </body>
+</html>

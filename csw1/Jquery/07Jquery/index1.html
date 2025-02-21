@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="../AssignMent/jQuery.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #div{
+
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+              //  console.log("hello",$("input").val())
+                // $("div p").remove("#"+$("input").val());
+                let value="#"+$("input").val();
+                console.log(value);
+                $(value).remove();
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="div">
+        <p id="id1">paragraph 1</p>
+        <p id="id2">paragraph 2</p>
+        <p id="id3">paragraph 2</p>
+    </div>
+    <br>
+    <input type="text" name="" id="textbox" value="">
+    
+      <button id="btn">click to remove</button>
+</body>
+</html>

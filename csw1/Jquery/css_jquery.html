@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Class element</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("#btn1").click(function () {
+                $("h1,h2,p").addClass("red bg size");
+            })
+            $("#btn2").click(function () {
+                $("h1,h2,p").removeClass("red bg size");
+                $("p").removeClass("blue")
+            })
+            $("#btn3").click(function () {
+                $("h1,h2,p").toggleClass("blue");
+            })
+        })  
+    </script>
+
+    <style>
+        .red {
+            color: red;
+        }
+
+        .size {
+            font-size: 2em;
+        }
+
+        .bg {
+            background-color: yellow;
+        }
+        .blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is the first heading</h1>
+    <h2>This is the second heading</h2>
+    <p>This is the first paragraph</p>
+    <p class="blue">This is the second paragraph</p>
+
+    <button id="btn1">Add Class</button>
+    <button id="btn2">Remove Class</button>
+    <button id="btn3">Toggle Class</button>
+</body>
+
+</html>

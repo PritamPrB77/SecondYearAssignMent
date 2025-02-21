@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+	<style>
+		#myDiv {
+            		background-color: blue;
+           		width: 100px;
+            		height: 200px;
+            		margin: 50px;
+        	}
+	</style>
+	<script src="jQuery.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#start').click(function() {
+				$('#myDiv').animate({ width: '400px' }, 2000);
+			});
+			$('#stop').click(function() {
+				$('#myDiv').stop();
+			});
+		});
+	</script>
+</head>
+<body>
+	<button id="start">Start</button>
+	<button id="stop">Stop</button>
+
+	<div id="myDiv"></div>
+</body>
+</html>

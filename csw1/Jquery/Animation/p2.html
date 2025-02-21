@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #div1 {
+            height: 70px;
+            width: 70px;
+            border-radius: 20px;
+            background-color:dodgerblue;
+            position: fixed;
+            text-align: center;
+            
+        }
+    </style>
+
+    <script>
+        $(document).ready(() => {
+            $("#btn1").click(() => {
+                $("#div1").animate({
+                  
+                    opacity: "0.3", height: "100px",
+                   
+                },"slow",).animate({
+                    width:"300px",
+                    opacity:"0.7",
+
+                },"fast").animate({
+                    opacity: "0.5", height: "70px",
+                    duration:3000
+                }).animate({
+                    opacity: "0.7", width: "300px",
+                    duration:"slow"
+                }).animate({fontSize:"2em"},"slow")
+            })
+            $("#btn2").click(() => {
+                $("#div1").stop(true,true);
+            })
+        })
+    </script>
+</head>
+
+<body>
+ <a id="s1" href="http://" target="_blank" rel="noopener noreferrer">hello</a>
+
+    <div id="div1">Hello Jquery</div>
+    <br><br><br><br><br>
+    <button id="btn1">
+        Animation
+    </button>
+    <button id="btn2">
+        Stop
+    </button>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#btn1").click(function(){
+                $("p").hide();
+            });
+            $("#p1").dblclick(function(){
+                $("p").hide();
+            });
+            $("#h1").click(function(){
+                $(this).hide();
+            });
+            $(".btn2").click(function(){
+                $("p").show(3000);
+            });
+            // $("p").hide();
+        });
+    </script>
+</head>
+<body>
+    <p>para1</p>
+    <p>para2</p>
+    <button id="btn1">click</button>
+    <p id="p1">Paragraph</p>
+    <h1 id="h1">h1</h1>
+    <h1 id="h2">h2</h1>
+    <button class="btn2">Click To get COntent</button>
+    <p class="s1"></p>
+</body>
+</html>

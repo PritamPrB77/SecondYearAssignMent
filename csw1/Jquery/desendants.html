@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #outer * {
+            display: block;
+            border: 3px solid black;
+            color: green;
+            padding: 6px;
+            margin: 20px;
+        }
+    </style>
+    <script>
+        $(document).ready(() => {
+            $("#btn1").click(function () {
+                $("span").parent().css({ "color": "red", "border": "3px solid blue" });
+            })
+            $("#btn2").click(function () {
+                $("span").parents().css({ "color": "red", "border": "3px solid blue" });
+            })
+            $("#btn3").click(function () {
+                $("span").parentsUntil("div").css({ "color": "red", "border": "3px solid blue" });
+            })
+            $("#btn4").click(function () {
+                $("div").children().css({ "color": "red", "border": "3px solid red" });
+            })
+            $("#btn5").click(function () {
+                $("div").find("span").css({ "color": "red", "border": "3px solid violet" });
+            })
+        })  
+    </script>
+</head>
+
+<body id="outer">
+    body(great great grand parent)
+    <div id="outer">div (great grand parent)
+        <ul id="outer"> ul(grand parent)
+            <li id="outer">li(direct parent)
+                <span id="outer">span</span>
+                <span id="outer">span</span>
+            </li>
+        </ul>
+    </div>
+
+    <button id="btn1">parent</button>
+    <button id="btn2">parents</button>
+    <button id="btn3">parentsUntil</button>
+
+    <button id="btn4">children</button>
+    <button id="btn5">find</button>
+
+</body>
+
+</html>

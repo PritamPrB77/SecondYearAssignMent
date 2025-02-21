@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("#btn1").click(function () {
+                $("p").first().css("color", "red")
+            })
+            $("#btn2").click(function () {
+                $("p").last().css("color", "purple")
+            })
+            $("#btn3").click(function () {
+                $("p").eq(2).css("color", "blue")
+            })
+        })  
+    </script>
+</head>
+
+<body>
+    <p>This is the first paragraph</p>
+    <p>This is the second paragraph</p>
+    <p>jjbguhygvygtfcuyb</p>
+    <p>This is the third paragraph</p>
+
+    <button id="btn1">first</button>
+    <button id="btn2">last</button>
+    <button id="btn3">eq</button>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #img{
+            height: 100px;
+        }
+    </style>
+<script>
+$(document).ready(function(){
+    $("#b1").click(function(){
+        $("p").append("<b>The new content</b>")
+    })
+    $("#b2").click(function(){
+        $("ul").append("<li>milk</li>")
+    })
+    $("#b3").click(function(){
+        $("p").prepend("<b>New Content at first</b>")
+    })
+    $("#b4").click(function(){
+        $("ul").prepend("<li>Milk</li>")
+    })
+    $("#b5").click(function(){
+        $("#h2").after("<p>This is after Helloworld</p>")
+    })
+    $("#b6").click(function(){
+        $("#h2").before("<p>This is before Helloworld</p>")
+    })
+
+    $("#b7").click(function(){
+        $("#img").after("<b>Bolt TExt After Image<b/>")
+    })
+    $("#b8").click(function(){
+        $("#img").before("<b>Bold TExt BEfore IMage<b/>")
+    })
+    $("#b9").click(function(){
+        $("#img").prepend("<b>Bold TExt prepend IMage<b/>")
+    })
+    $("#b19").click(function(){
+        $("#img").append("<b>Bold TExt append IMage<b/>")
+    })
+})
+</script>
+</head>
+<body>
+    <h2 id="h2">Hello world</h2>
+    <p>This is a Paragraph</p>
+    <p>This is another Paragraph</p>
+    <ul>
+        <li>Coffee</li>
+        <li>Water</li>
+        <li>TEa</li>
+    </ul>
+<button id="b1">Append in the para</button>
+<button id="b2">Append in the list</button>
+<button id="b3">Prepend in the para</button>
+<button id="b4">Prepend in the list</button>
+<button id="b5">after para</button>
+<button id="b6">before npara</button>
+
+<br><br>
+<img id="img" src="https://images.pexels.com/photos/29246804/pexels-photo-29246804/free-photo-of-charming-rustic-house-with-lush-garden-pathway.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+<br>
+<button id="b7">after Image</button>
+<button id="b8">before Image</button>
+<button id="b9">prepend Image</button>
+<button id="b10">append Image</button>
+</body>
+</html>

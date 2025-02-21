@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            position: relative;
+        }
+        .d2{
+            position:absolute;
+            background-color: orange;
+            width: 60px;
+            height: 60px;
+            padding: 12px 16px;
+            margin: 10px;
+            box-shadow: 15px 15px 10px 10px ;
+            display: none;
+        }
+        .d1:hover .d2{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- when a user points at an element with a cursor, a dropsown box appears in that area of webpage -->
+     <h2>Basic dropDown</h2>
+     <div class="d1">if cursor Moves here It Creates A DropDown
+        <div class="d2">
+            <p>HI!!</p>
+        </div>
+     </div>
+
+</body>
+</html>

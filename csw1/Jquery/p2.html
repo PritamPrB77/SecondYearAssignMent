@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="./p2.css"> -->
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                // $(".key").show("fast");//We cAn  Also Used NumericalValue
+                $(".key").show(3000);//we can also Used MilliSecond
+
+                
+            })
+            // $("#btn2").click(function(){
+            //     // $(".key").hide("slow");
+            //     $(".key").hide(3000);
+
+            //     console.log("hello")
+            // })
+               $("#btn2").click((e)=>{
+                // $(".key").hide("slow");
+                $(".key").hide(3000);
+                alert("This Paragraph Is Shown")
+
+                console.log(e)
+            })
+            $("#btn3").click((e)=>{
+                // $(".key").hide("slow");
+                $(".key").toggle(2000);
+
+                // console.log(e)
+            })
+            
+
+            
+        })
+    </script>
+</head>
+<body class="tutorial"  >
+    <!-- <main class="page">
+        <div class="page__inner">
+          
+          The cursor elements 
+        - <div class="cursor cursor--small"></div>
+          <canvas class="cursor cursor--canvas" resize></canvas>
+          
+        </div>
+      </main> --> 
+    
+      <div id="cursor" class="cursor">
+        <div class="ring">
+            <div><!--Border--></div>
+        </div>
+        <div class="ring">
+            <div><!--Pointer--></div>		
+        </div>
+    </div>
+    <h2 class="key">jquery hide() and show()</h2>
+    <p class="key">tHis is first paragraph</p>
+    <p class="key">this is second paragraph</p>
+    <p class="key">this is third paragraph</p>
+    <button id="btn1">Show</button>
+    <button id="btn2">Hide</button>
+    <button id="btn3">Toggle</button>
+    <!-- instaed of hide and show i can use only One Button -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>-->
+    <!-- <script src="./p2.js"></script> -->
+</body>
+</html>

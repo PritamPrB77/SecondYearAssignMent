@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer *{display: block;
+               border: 3px solid rgb(43, 41, 41) ;
+               color: orange;
+               padding: 6px;
+               margin: 20px;
+        }
+        button{
+            background-color: red;
+            /* color: white;
+            padding: 10px; */
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   $("#b1").click(function(){
+    $("h2").siblings().css({
+        "color": "blue","border":"3px soild blue"
+    })
+   })
+   $("#b2").click(function(){
+    $("h2").next().css({
+        "color": "blue","border":"3px solid blue"
+    })
+   })
+   $("#b3").click(function(){
+    $("h2").nextAll().css({
+        "color": "blue","border":"3px solid blue"
+    })
+   })
+   $("#b4").click(function(){
+    $("h1").nextUntil("h5").css({
+        "color": "blue","border":"3px solid blue"
+    })
+   })
+   $("#b5").click(function(){
+    $("h5").prev().css({
+        "color": "blue","border":"3px solid blue"
+    })
+   })
+   $("#b6").click(function(){
+    $("h5").prevAll().css({
+        "color": "blue","border":"3px solid blue"
+    })
+   })
+   $("#b7").click(function(){
+    $("h5").prevUntil("h1").css({
+        "color": "blue","border":"3px solid blue"
+    })
+   })
+   $("#b8").click(function(){
+   location.reload();
+   })
+  
+})
+</script>
+</head>
+<body >
+    <div id="outer">
+        <div>Div (parent)
+            <p>pjhgjh</p>
+            <h1>h1</h1>
+            <h2>h2</h2>
+            <h3>h3</h3>
+            <h4>h4u</h4>
+            <h5>h5</h5>
+            <h6>h6</h6>
+        </div>
+
+        <button id="b1"> h2 Siblings</button>
+        <button id="b2"> h2 next</button>
+        <button id="b3"> h2 nextAll</button>
+        <button id="b4">h1 nextUntill h5</button>
+        <button id="b5">h5 prev</button>
+        <button id="b6">h5 prevAll</button>
+        <button id="b7">h5 prevUntil h1 </button>
+        <button id="b8">reset</button>
+    </div>
+</body>
+</html>
