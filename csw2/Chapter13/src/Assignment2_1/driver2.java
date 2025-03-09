@@ -103,7 +103,7 @@ public class driver2 {
 		Collections.sort(al);
   System.out.println(al);
   
-           book .compare(s1,s3);
+           book .compare(s1,s2);
 	}
 
 	
