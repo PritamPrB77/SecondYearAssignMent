@@ -33,6 +33,8 @@ public class Arrayleader {
 
     public static void main(String[] args) {
         int arr[]={16 ,17 ,4, 3 ,5 ,2};
+        int brr[]={16 ,17 ,4, 3 ,5 ,2};
+
         ArrayList<Integer> ar=new ArrayList<>();
         ar=leaders(6,arr);
         System.out.println(ar);

@@ -3,6 +3,8 @@ package Practse;
 import java.util.Arrays;
 
 public class ArrayReduction {
+
+
     public static void main(String[] args) {
         // Sample input array
         int[] array = {10, 15, 7, 9};

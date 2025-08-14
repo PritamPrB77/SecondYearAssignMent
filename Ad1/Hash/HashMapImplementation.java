@@ -53,6 +53,7 @@ public class HashMapImplementation {
         private  int Hashfunction(k key){
             int hc=key.hashCode();
             ///key.hashcode()-->is an inubuilt method in java to generate hashcode but
+            //it generate also an negetive number
             //in our hash table bucket length is defined so we need to mod it with bucket length and
             //math.abs is due to hashcode can generate  -ve value also
             return (Math.abs(hc))%buckets.length;//-->return bucket index;

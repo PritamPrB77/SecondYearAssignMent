@@ -98,7 +98,7 @@ public class Graph2 {
         while(!s1.isEmpty()){
             int elem=s1.remove();
             System.out.print(elem+" ");
-            for (int i = 0; i < graph.length; i++) {
+            for (int i = 0; i < graph[src].length; i++) {
                 if (graph[elem][i]==1 &&!vis[i]){
                     s1.add(i);
                     vis[i]=true;

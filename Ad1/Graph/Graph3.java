@@ -6,6 +6,8 @@ import java.util.*;
 public class Graph3 {
      private LinkedList<LinkedList<gph>> Adj;
    int c0nt;
+
+   //if i use default size than i could modify itt like hashed map
      Graph3(int cnt){
        c0nt=cnt;
              Adj=new LinkedList<LinkedList<gph>>();
@@ -27,8 +29,6 @@ public class Graph3 {
 
         }
     }
-
-
     public void addUndirectedGraph(int src,int dst,int cost){
 
          Adj.get(src).add(new gph(src,cost,dst));
@@ -80,7 +80,7 @@ public class Graph3 {
          Dfs(graph,vis,src);
          return vis[dst];
    }
-
+// it has some mistake i reviewing it it only work if input is dag else it give wrong output
     public static  void ToplologicalSort(Graph3 gph){
          Stack<Integer>stk=new Stack<Integer>();
          int count=gph.c0nt;
@@ -98,7 +98,6 @@ public class Graph3 {
             System.out.print(stk.pop()+"->");
         }
     }
-
 
     public static  int DfscountPath(Graph3 graph,int src, int dst,boolean vis[]){
          if(src==dst){
@@ -144,7 +143,7 @@ public class Graph3 {
          Stack<Integer> stk=new Stack<>();
          Dfsutiliprintpath(graph,vis,stk,src,dst);
     }
-                           public static  int bfsDistance(Graph3 s1,int src,int dst){
+    public static  int bfsDistance(Graph3 s1,int src,int dst){
                                         boolean vis[]=new boolean[s1.c0nt];
                                         Queue<Integer>q=new LinkedList<>();
                                         int cntDist[]=new int[s1.c0nt];
@@ -178,6 +177,74 @@ public class Graph3 {
                                       return  -1;
                            }
 
+    public static boolean  isCyclepresent  (Graph3 graph, boolean[]vis,int curr, int  parent) {
+
+         vis[curr]=true;
+         LinkedList<gph> Adj= graph.Adj.get(curr);
+         for(gph adj: Adj){
+             if(!vis[adj.neigh]){
+               if(  isCyclepresent(graph,vis,adj.neigh,curr)){
+                   return true;
+               }
+
+             }
+             else if(vis[adj.neigh]&&adj.neigh!=parent){
+                 return true;
+             }
+         }
+         return false;
+               }
+
+      public static boolean disconnectNumofCycle(Graph3 graph ){
+             boolean vis[]=new boolean[graph.c0nt];
+
+         for(int i=0;i<graph.c0nt;i++){
+                if(vis[i]==false){
+                    if(isCyclepresent(graph,vis,i,-1)){
+                        return true;
+                    }
+                }
+         }
+       return false;
+        }
+
+      public static String checkUndirectedConnected(Graph3 graph,int src){
+         boolean vis[]=new boolean[graph.c0nt];
+            Dfs(graph, vis,src);
+            for(int i=0;i< graph.c0nt;i++){
+                if(vis[i]==false){
+                    return "Disconnected";
+                }
+            }
+            return "connected";
+      }
+
+public static  void checkshortestpathUndirected(Graph3 s1,int src){
+
+         int distannce[]=new int[s1.c0nt];
+         int path[]=new int[s1.c0nt];
+         Arrays.fill(distannce,-1);
+         Queue<Integer> q=new LinkedList<>();
+         q.add(src);
+         distannce[src]=0;
+
+         while (!q.isEmpty()){
+             int elem=q.remove();
+             LinkedList<gph> adj=s1.Adj.get(elem);
+             for(gph edge: adj){
+                 if(distannce[edge.neigh]==-1){
+                     distannce[edge.neigh]=distannce[elem]+1;
+                     path[edge.neigh]=elem;
+                     q.add(edge.neigh);
+                 }
+             }
+         }
+
+    for (int i = 0; i < s1.c0nt; i++) {
+        System.out.println(path[i] + " to " + i + " weight " +distannce[i]);
+    }
+
+}
 
 
     public static void main(String[] args) {
@@ -200,14 +267,40 @@ public class Graph3 {
         s1.addUndirectedGraph(2,3,34);
         s1.addUndirectedGraph(3,4,34);
 
+
+//        s1.addUndirectedGraph(5,6,45);
+//        s1.addUndirectedGraph(5,7,45);
+//        s1.addUndirectedGraph(6,7,45);
+
          s1.Display();
-         s1.ToplologicalSort(s1);
-        System.out.println("Path exit or not "+s1.pathexitOrnot(s1,1,3));
-        System.out.println("All thE Paths From src to dst"+s1.CountAllPath(s1,1,3));
-        System.out.println("Print All The Path from src to dst");
-        PrintAllPath(s1,0,3);
-        System.out.println("Distance Between src to dst is"+s1.bfsDistance(s1,0,4));
+//         s1.ToplologicalSort(s1);
+//        System.out.println("Path exit or not "+s1.pathexitOrnot(s1,1,3));
+//        System.out.println("All thE Paths From src to dst"+s1.CountAllPath(s1,1,3));
+//        System.out.println("Print All The Path from src to dst");
+//        PrintAllPath(s1,0,3);
+//        System.out.println("Distance Between src to dst is"+s1.bfsDistance(s1,0,4));
+
+//        boolean vis[]=new boolean[s1.c0nt];
+//        //in conntected graph
+//        System.out.println("is cyclee present "+s1.isCyclepresent(s1,vis,0,-1));
+//         //in disconnected graoph
+//        System.out.println("is cyclee present "+s1.disconnectNumofCycle(s1));
+
+
+        //System.out.println("say graph is connected or not  ? "+ s1.checkUndirectedConnected(s1,0));
+
+        checkshortestpathUndirected(s1,1);
+
+
+
+
+//
+//        EdgeComparator comp = new EdgeComparator();
+//        PriorityQueue<gph>=new PriorityQueue<gph>(100,comp);
 
     }
 
 }
+
+
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <!-- in exam we wrote only requried thing  like the start from(<bean class="in.soa.beans.Student" id="stdId1"> ) to
+ </bean> inside this    not the scema part if asks for xml file  -->
+ <!--  <bean> Tag:
+It defines a Spring bean (i.e., an object that Spring manages).
+
+class="in.soa.beans.Student" → This is the full path to the Student class.
+
+id="stdId1" → Unique identifier for the bean (used in getBean("stdId1")).
+
+🔸 <property> Tags:
+These tags set the values of the fields (variables) inside the Student object.
+
+This works only if your Student class has setters for name, rollno, and email.
+
+-->
+<!-- setter is important-->
+<bean class="in.soa.beans.Student" id="stdId1"> 
+
+<property name="name" value="abc"></property>
+<property name="rollno" value="123"></property>
+<property name="email" value="soa@gmail.com"></property>
+
+</bean>
+
+<bean class="in.soa.beans.Student" id="stdId2"> 
+
+<property name="name" value="abcd"></property>
+<property name="rollno" value="1234"></property>
+<property name="email" value="soa4@gmail.com"></property>
+
+</bean>
+</beans>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+     <!-- Since We use the Constructor we need to maintain The Order -->    
+     <bean class="in.soa.beans.Adress" id="addrId1">
+		<constructor-arg value="909" />
+		<constructor-arg value="Cuttack" />
+		<constructor-arg value="754023" />
+	</bean>
+	<bean class="in.soa.beans.Adress" id="addrId2">
+		<constructor-arg value="995" />
+		<constructor-arg value="Bhubaneswar" />
+		<constructor-arg value="751030" />
+	</bean>
+	<bean class="in.soa.beans.Student" id="stdId1">
+		<constructor-arg value="9" />
+		<constructor-arg value="Debi" />
+		<constructor-arg ref="addrId1" />
+	</bean>
+	<bean class="in.soa.beans.Student" id="stdId2">
+		<constructor-arg value="12" />
+		<constructor-arg value="Ankit" />
+		<constructor-arg ref="addrId2" />
+	</bean>
+  
+</beans>

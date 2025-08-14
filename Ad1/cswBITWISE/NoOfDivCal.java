@@ -21,6 +21,6 @@ public class NoOfDivCal {
 
     public static void main(String[] args) {
         System.out.println();
-        cal(2,5);
+        cal(2,10);
     }
 }

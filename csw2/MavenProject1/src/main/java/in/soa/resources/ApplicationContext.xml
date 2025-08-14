@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="in.soa.beans.Adress" id="adr1">
+    <property name="houseNo" value="910"/>
+    <property name="city" value="Bhubaneswar"/>
+    <property name ="pin" value="751030"></property>
+    </bean>
+    
+     <bean class="in.soa.beans.Student" id="std1">
+    <property name="name" value="Rama"/>
+    <property name="addr" ref="adr1"/>
+    <!--  if we difine value="addr1" it shows the error  because we not assigning value we assigning refference -->
+    <property name ="rollno" value="07"/>
+    
+    
+    </bean>
+         <bean class="in.soa.beans.Student" id="std2">
+    <property name="name" value="Hari"/>
+    <property name="addr" ref="adr1"/>
+    <!--  if we difine value="addr1" it shows the error  because we not assigning value we assigning refference -->
+    <property name ="rollno" value="077"/>
+    
+    
+    </bean>
+
+</beans>

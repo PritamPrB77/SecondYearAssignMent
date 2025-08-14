@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class mergesort {
     public static void mergeSort(int arr[],int l,int r){
         if(l>=r)return ;
-        int mid=(l+r)/2;
+        int mid=l+(r-l)/2;
 
         mergeSort(arr,l,mid);
         mergeSort(arr,mid+1,r);
